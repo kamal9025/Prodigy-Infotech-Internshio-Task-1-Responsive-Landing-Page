@@ -1,0 +1,121 @@
+/* Resetting margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Styling the navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0e0202;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+
+/* Navbar scrolled effect */
+nav.scrolled {
+    background-color: #746e8e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation menu styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: #e80b0b;
+}
+
+/* Content area styling */
+.section {
+    display: none; /* Hidden initially */
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section.active {
+    display: block; /* Show only the active section */
+}
+
+#home {
+    background-color: #f0f0f0;
+}
+
+#about {
+    background-color: #e6e6fa;
+}
+
+#services {
+    background-color: #d1e7dd;
+}
+
+#contact {
+    background-color: #f8d7da;
+}
+
+/* Styling the image in the Home section */
+.home-image {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the images in Services section */
+.service-image {
+    width: 150px; /* Set width for each image */
+    height: 150px; /* Set height for each image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin: 10px; /* Space around each image */
+}
+
+/* Footer styling */
+footer {
+    background-color: #0e0202;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    
+    .service-image {
+        width: 100px; /* Reduce size of service images on smaller screens */
+        height: 100px; /* Adjust height accordingly */
+    }
+}
